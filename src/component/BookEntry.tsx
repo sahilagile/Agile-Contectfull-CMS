@@ -1,15 +1,13 @@
 // src/components/BookEntry.tsx
 import { useEffect, useState } from 'react'
-import type { Entry } from 'contentful'
-import type { BookFields } from '../types/Book'
-import client from '../contentfulClient'
+import client from '../ContentfulClient'
 
 const BookEntry = () => {
-  const [book, setBook] = useState<Entry<BookFields> | null>(null)
+  const [book, setBook] = useState<any>(null)
 
   useEffect(() => {
     client
-      .getEntry<BookFields>('12JxojUpISa7wT2GXKJB8n')
+      .getEntry('12JxojUpISa7wT2GXKJB8n')
       .then((entry) => {
         setBook(entry)
       })
