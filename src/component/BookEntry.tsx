@@ -1,6 +1,6 @@
 // src/components/BookEntry.tsx
 import { useEffect, useState } from 'react'
-import client from '../ContentfulClient'
+import client from '../contentfulClients'
 
 const BookEntry = () => {
   const [book, setBook] = useState<any>(null)
